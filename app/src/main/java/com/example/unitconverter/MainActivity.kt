@@ -108,7 +108,11 @@ fun UnitConverter() {
         Spacer(Modifier.height(10.dp))
         Row {
             Box {
-                Button(onClick = { iExpanded = true }) { //this is input button
+                //this is input button
+                Button(onClick = {
+                    iExpanded = true
+                    toPrint = false
+                }) {
                     Text("Select")
                     Icon(Icons.Default.ArrowDropDown, contentDescription = "Arrow Down")
                 }
@@ -133,7 +137,11 @@ fun UnitConverter() {
             }
             Spacer(modifier = Modifier.width(16.dp))
             Box {
-                Button(onClick = { oExpanded = true }) { //this is output button
+                //this is output button
+                Button(onClick = {
+                    oExpanded = true
+                    toPrint = false
+                }) {
                     Text("Select")
                     Icon(Icons.Default.ArrowDropDown, contentDescription = "Arrow Down")
                 }
@@ -174,7 +182,10 @@ fun UnitConverter() {
                 Text("Convert")
             }
             Spacer(modifier = Modifier.width(16.dp))
-            Button(onClick = {}){
+            Button(onClick = {
+                inputValue = ""
+                outputValue = ""
+            }){
                 Text("Reset")
             }
         }
